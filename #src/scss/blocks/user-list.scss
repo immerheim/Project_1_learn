@@ -1,0 +1,49 @@
+.user-list {
+	@media (min-width: $tablet) {
+		display: flex;
+	}
+
+	@media (min-width: $desktop) {
+		display: flex;
+		order: 3;
+	}
+}
+
+.user-list__item {
+	@media (min-width: $tablet) {
+		display: flex;
+		align-items: center;
+		border-left: 1px solid $gray-border;
+	}
+
+	@media (min-width: $desktop) {
+		display: flex;
+		align-items: center;
+		border-left: 1px solid $gray-border;
+	}
+}
+
+.user-list__link {
+	font-size: 17px;
+	line-height: 24px;
+	font-weight: 700;
+	padding: 25px 0 25px 75px;
+
+	@media (min-width: $tablet) {
+		padding: 32px 0 32px 83px;
+	}
+
+	@media (min-width: $desktop) {
+		padding: 32px 0 32px 83px;
+	}
+}
+
+.user-list__link--search {
+	@media (min-width: $tablet) {
+		font-size: 0px;
+	}
+
+	@media (min-width: $desktop) {
+		font-size: 0px;
+	}
+}

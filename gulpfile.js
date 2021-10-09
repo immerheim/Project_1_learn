@@ -56,7 +56,7 @@ let { src, dest } = require('gulp'),
 	del = require('del'),
 	scss = require('gulp-sass')(require('sass')),
 	autoprefixer = require('gulp-autoprefixer'),
-	gcmq = require('gulp-group-css-media-queries'),
+	// gcmq = require('gulp-group-css-media-queries'),
 	clean_css = require('gulp-clean-css'),
 	rename = require("gulp-rename"),
 	uglify = require('gulp-uglify-es').default,
@@ -91,7 +91,7 @@ function css(params) {
 		.pipe(
 			scss({ outputStyle: 'expanded' }).on('error', scss.logError)
 		)
-		.pipe(gcmq())
+		// .pipe(gcmq())
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: ["last 5 versions"]
@@ -150,7 +150,7 @@ function fonts() {
 }
 
 function fontsStyle() {
-	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+	let file_content = fs.readFileSync(source_folder + '/scss/global/fonts.scss');
 	if (file_content == '') {
 		fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
 		return fs.readdir(path.build.fonts, function (err, items) {

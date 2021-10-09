@@ -1,36 +1,41 @@
 @mixin font($font_name, $file_name, $weight, $style) {
-@font-face {
-  font-family: $font_name; 
-  font-display: swap; 
-  src: url("../fonts/#{$file_name}.woff") 
-  format("woff"), 
-  url("../fonts/#{$file_name}.woff2") 
-  format("woff2"); 
-  font-weight: #{$weight}; 
-  font-style: #{$style}; }
-
+  @font-face {
+    font-family: $font_name; 
+    font-display: swap; 
+    src: url("../fonts/#{$file_name}.woff") 
+    format("woff"), 
+    url("../fonts/#{$file_name}.woff2") 
+    format("woff2"); 
+    font-weight: #{$weight}; 
+    font-style: #{$style}; }
 }
 
-@import "fonts";
+@import "global/fonts";
+@import "global/variables";
+@import "global/global";
+@import "blocks/container";
+@import "blocks/button";
+// шапка
+@import "blocks/header-page";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/user-list";
+@import "blocks/additional-menu";
+// контент главной
+@import "blocks/main-page";
+@import "blocks/content";
+@import "blocks/features";
+@import "blocks/about";
+@import "blocks/feedback";
+@import "blocks/contacts";
+// контент каталога
+@import "blocks/catalog";
+@import "blocks/production";
+// контент формы
+@import "blocks/content-form";
+// футер
+@import "blocks/footer-page";
+@import "blocks/footer-logo";
+@import "blocks/social-block";
+@import "blocks/copyright";
 
-$font-stack: 15px;
-
-body {
-  display: flex;
-  font-size: $font-stack;
-  background-image: url(../img/triple-set-tablet.jpg);
-}
-
-span {
-  font-size: $font-stack;
-  @media (max-width: 800px) {
-    font-size: 10px;    
-  }
-}
-
-div {
-  font-size: $font-stack;
-  @media (max-width: 800px) {
-    font-size: 10px;    
-  }
-}

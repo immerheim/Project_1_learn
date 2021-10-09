@@ -1,0 +1,11 @@
+.footer-logo {
+	display: none;
+
+	@media (min-width: $tablet) {
+		display: block;
+	}
+
+	@media (min-width: $desktop) {
+		display: block;
+	}
+}

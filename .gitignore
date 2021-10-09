@@ -1,0 +1,5 @@
+*.log
+*.pdf
+*.psd
+node_modules/
+project_1/
